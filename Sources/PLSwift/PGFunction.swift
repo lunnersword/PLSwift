@@ -8,20 +8,20 @@
 
 import CPLSwift
 
-public extension FunctionCallInfoData {
+public extension FunctionCallInfoBaseData {
   
   /// Access PostgreSQL function call arguments as a Datum
   subscript(datum idx: Int) -> Datum? {
     // convert tuple to index
     switch idx {
-      case 0: return arg.0
-      case 1: return arg.1
-      case 2: return arg.2
-      case 3: return arg.3
-      case 4: return arg.4
-      case 5: return arg.5
-      case 6: return arg.6
-      case 7: return arg.7
+      case 0: return args.0
+      case 1: return args.1
+      case 2: return args.2
+      case 3: return args.3
+      case 4: return args.4
+      case 5: return args.5
+      case 6: return args.6
+      case 7: return args.7
       default: return nil
     }
   }
